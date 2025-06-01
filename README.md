@@ -1,148 +1,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dream X Eceor - Downloads</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dream X Eceor | Download</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <style>
+    /* Reset and base */
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(145deg, #0f0f0f, #1c1c1c);
-      color: white;
+      background: linear-gradient(135deg, #0d1117, #161b22);
+      color: #c9d1d9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
+    /* Header */
     header {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 20px 40px;
+      background: rgba(13,17,23,0.95);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #30363d;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 10;
     }
-
     .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #00ffe5;
+      color: #58a6ff;
+      font-weight: 700;
+      font-size: 1.6rem;
+      user-select: none;
     }
-
     nav a {
-      color: white;
-      margin: 0 15px;
+      color: #8b949e;
+      margin-left: 24px;
       text-decoration: none;
+      font-weight: 500;
       transition: color 0.3s ease;
+      user-select: none;
     }
-
     nav a:hover {
-      color: #00ffe5;
+      color: #58a6ff;
     }
 
+    /* Hero Section */
     .hero {
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px 40px;
+      max-width: 700px;
+      margin: 0 auto;
     }
-
     .hero h1 {
-      font-size: 48px;
-      color: #00ffe5;
+      font-size: 3.5rem;
+      color: #58a6ff;
       margin-bottom: 10px;
+      user-select: none;
     }
-
     .hero p {
-      font-size: 18px;
-      color: #ccc;
+      font-size: 1.2rem;
+      color: #8b949e;
+      user-select: none;
     }
 
+    /* Tabs */
     .tabs {
       display: flex;
       justify-content: center;
-      margin-top: 40px;
-      border-bottom: 1px solid #333;
-      flex-wrap: wrap;
+      gap: 30px;
+      border-bottom: 1px solid #30363d;
+      max-width: 720px;
+      margin: 0 auto;
+      user-select: none;
     }
-
     .tab-button {
       background: none;
       border: none;
-      color: white;
-      padding: 14px 20px;
+      padding: 14px 24px;
+      font-size: 1rem;
+      color: #8b949e;
       cursor: pointer;
-      font-size: 16px;
-      transition: color 0.3s ease;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+      font-weight: 600;
     }
-
+    .tab-button:hover {
+      color: #58a6ff;
+    }
     .tab-button.active {
-      border-bottom: 2px solid #00ffe5;
-      color: #00ffe5;
+      color: #58a6ff;
+      border-bottom: 3px solid #58a6ff;
+      cursor: default;
     }
 
+    /* Tab Content */
     .tab-content {
       display: none;
+      max-width: 720px;
+      margin: 40px auto 80px;
       padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
+      background: rgba(24, 27, 31, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 0 16px #58a6ffaa;
     }
-
     .tab-content.active {
       display: block;
     }
 
-    .download-section {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 30px;
-      margin-top: 20px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
-
     .download-section h2 {
-      color: #00ffe5;
-      margin-bottom: 10px;
+      margin-top: 0;
+      color: #58a6ff;
+      user-select: none;
     }
-
     .download-section p {
-      color: #ccc;
-      margin-bottom: 20px;
+      color: #8b949e;
+      margin-bottom: 24px;
+      user-select: none;
     }
-
     .download-button {
       display: inline-block;
-      padding: 12px 24px;
-      background-color: #00ffe5;
-      color: black;
-      font-weight: bold;
+      background: #58a6ff;
+      color: #0d1117;
+      font-weight: 700;
       text-decoration: none;
+      padding: 14px 36px;
       border-radius: 8px;
-      transition: background 0.3s ease;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      user-select: none;
     }
-
     .download-button:hover {
-      background-color: #00cdbf;
+      background: #1f6feb;
     }
 
+    /* Footer */
     footer {
       text-align: center;
       padding: 40px 20px;
-      background: #0a0a0a;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: #777;
-      margin-top: 60px;
+      color: #484f58;
+      border-top: 1px solid #30363d;
+      font-size: 0.9rem;
+      user-select: none;
     }
 
-    @media (max-width: 768px) {
+    /* Responsive */
+    @media (max-width: 480px) {
       .hero h1 {
-        font-size: 36px;
+        font-size: 2.4rem;
+      }
+      nav a {
+        margin-left: 12px;
+        font-size: 0.9rem;
+      }
+      .tabs {
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .tab-button {
+        padding: 10px 14px;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -161,56 +182,61 @@
 
 <section class="hero">
   <h1>Download Dream X Eceor</h1>
-  <p>The most advanced Roblox utility tool — pick your method below.</p>
+  <p>The most advanced Roblox utility tool — pick your download below.</p>
 </section>
 
-<div class="tabs">
-  <button class="tab-button active" data-tab="tab1">Direct Download</button>
-  <button class="tab-button" data-tab="tab2">Mirror Download</button>
-  <button class="tab-button" data-tab="tab3">GitHub Source</button>
+<div class="tabs" role="tablist" aria-label="Download Options">
+  <button class="tab-button active" role="tab" aria-selected="true" aria-controls="direct" id="tab-direct">Direct Download</button>
+  <button class="tab-button" role="tab" aria-selected="false" aria-controls="mirror" id="tab-mirror">Mirror Download</button>
+  <button class="tab-button" role="tab" aria-selected="false" aria-controls="github" id="tab-github">GitHub Source</button>
 </div>
 
-<div id="tab1" class="tab-content active">
+<div id="direct" class="tab-content active" role="tabpanel" aria-labelledby="tab-direct">
   <div class="download-section">
     <h2>Direct Download</h2>
     <p>Fastest way to get Dream X Eceor on your system. One click setup.</p>
-    <a href="#" class="download-button">Download Now</a>
+    <a href="#" class="download-button" target="_blank" rel="noopener">Download Now</a>
   </div>
 </div>
 
-<div id="tab2" class="tab-content">
+<div id="mirror" class="tab-content" role="tabpanel" aria-labelledby="tab-mirror">
   <div class="download-section">
     <h2>Mirror Download</h2>
     <p>Use this option if the primary link is slow or blocked in your region.</p>
-    <a href="#" class="download-button">Download from Mirror</a>
+    <a href="#" class="download-button" target="_blank" rel="noopener">Download from Mirror</a>
   </div>
 </div>
 
-<div id="tab3" class="tab-content">
+<div id="github" class="tab-content" role="tabpanel" aria-labelledby="tab-github">
   <div class="download-section">
     <h2>GitHub Repository</h2>
     <p>Explore the source code or contribute on GitHub.</p>
-    <a href="#" class="download-button">View on GitHub</a>
+    <a href="https://github.com/" target="_blank" rel="noopener" class="download-button">View on GitHub</a>
   </div>
 </div>
 
 <footer>
-  &copy; 2025 Dream X Eceor. This project is not affiliated with Roblox Corporation.
+  &copy; 2025 Dream X Eceor. Not affiliated with Roblox Corporation.
 </footer>
 
 <script>
-  const tabButtons = document.querySelectorAll('.tab-button');
-  const tabContents = document.querySelectorAll('.tab-content');
+  const tabs = document.querySelectorAll('.tab-button');
+  const panels = document.querySelectorAll('.tab-content');
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const target = button.getAttribute('data-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Deactivate all tabs & panels
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach(panel => panel.classList.remove('active'));
 
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      tabContents.forEach(content => content.classList.remove('active'));
-
-      button.classList.add('active');
-      document.getElementById(target).classList.add('active');
+      // Activate clicked tab & corresponding panel
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      const panelId = tab.getAttribute('aria-controls');
+      document.getElementById(panelId).classList.add('active');
     });
   });
 </script>
